@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55AFF5A819AEBF23007FBACA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFF5A719AEBF23007FBACA /* Foundation.framework */; };
+		55AFF5AA19AEBF23007FBACA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFF5A919AEBF23007FBACA /* CoreGraphics.framework */; };
+		55AFF5AC19AEBF23007FBACA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFF5AB19AEBF23007FBACA /* UIKit.framework */; };
+		55AFF5B219AEBF23007FBACA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55AFF5B019AEBF23007FBACA /* InfoPlist.strings */; };
+		55AFF5B419AEBF23007FBACA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFF5B319AEBF23007FBACA /* main.m */; };
+		55AFF5B819AEBF23007FBACA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFF5B719AEBF23007FBACA /* AppDelegate.m */; };
+		55AFF5BB19AEBF23007FBACA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AFF5B919AEBF23007FBACA /* Main_iPhone.storyboard */; };
+		55AFF5BE19AEBF23007FBACA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AFF5BC19AEBF23007FBACA /* Main_iPad.storyboard */; };
+		55AFF5C119AEBF23007FBACA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFF5C019AEBF23007FBACA /* MasterViewController.m */; };
+		55AFF5C419AEBF23007FBACA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFF5C319AEBF23007FBACA /* DetailViewController.m */; };
+		55AFF5C619AEBF23007FBACA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55AFF5C519AEBF23007FBACA /* Images.xcassets */; };
+		55AFF5CD19AEBF23007FBACA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFF5CC19AEBF23007FBACA /* XCTest.framework */; };
+		55AFF5CE19AEBF23007FBACA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFF5A719AEBF23007FBACA /* Foundation.framework */; };
+		55AFF5CF19AEBF23007FBACA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFF5AB19AEBF23007FBACA /* UIKit.framework */; };
+		55AFF5D719AEBF23007FBACA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55AFF5D519AEBF23007FBACA /* InfoPlist.strings */; };
+		55AFF5D919AEBF23007FBACA /* LiberatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFF5D819AEBF23007FBACA /* LiberatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55AFF5D019AEBF23007FBACA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55AFF59C19AEBF23007FBACA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AFF5A319AEBF23007FBACA;
+			remoteInfo = Liberator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55AFF5A419AEBF23007FBACA /* Liberator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liberator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AFF5A719AEBF23007FBACA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		55AFF5A919AEBF23007FBACA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		55AFF5AB19AEBF23007FBACA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		55AFF5AF19AEBF23007FBACA /* Liberator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Liberator-Info.plist"; sourceTree = "<group>"; };
+		55AFF5B119AEBF23007FBACA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55AFF5B319AEBF23007FBACA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55AFF5B519AEBF23007FBACA /* Liberator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Liberator-Prefix.pch"; sourceTree = "<group>"; };
+		55AFF5B619AEBF23007FBACA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55AFF5B719AEBF23007FBACA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55AFF5BA19AEBF23007FBACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		55AFF5BD19AEBF23007FBACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		55AFF5BF19AEBF23007FBACA /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		55AFF5C019AEBF23007FBACA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		55AFF5C219AEBF23007FBACA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		55AFF5C319AEBF23007FBACA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		55AFF5C519AEBF23007FBACA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		55AFF5CB19AEBF23007FBACA /* LiberatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiberatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AFF5CC19AEBF23007FBACA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		55AFF5D419AEBF23007FBACA /* LiberatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiberatorTests-Info.plist"; sourceTree = "<group>"; };
+		55AFF5D619AEBF23007FBACA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55AFF5D819AEBF23007FBACA /* LiberatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiberatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55AFF5A119AEBF23007FBACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFF5AA19AEBF23007FBACA /* CoreGraphics.framework in Frameworks */,
+				55AFF5AC19AEBF23007FBACA /* UIKit.framework in Frameworks */,
+				55AFF5A819AEBF23007FBACA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AFF5C819AEBF23007FBACA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFF5CD19AEBF23007FBACA /* XCTest.framework in Frameworks */,
+				55AFF5CF19AEBF23007FBACA /* UIKit.framework in Frameworks */,
+				55AFF5CE19AEBF23007FBACA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55AFF59B19AEBF23007FBACA = {
+			isa = PBXGroup;
+			children = (
+				55AFF5AD19AEBF23007FBACA /* Liberator */,
+				55AFF5D219AEBF23007FBACA /* LiberatorTests */,
+				55AFF5A619AEBF23007FBACA /* Frameworks */,
+				55AFF5A519AEBF23007FBACA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55AFF5A519AEBF23007FBACA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55AFF5A419AEBF23007FBACA /* Liberator.app */,
+				55AFF5CB19AEBF23007FBACA /* LiberatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55AFF5A619AEBF23007FBACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55AFF5A719AEBF23007FBACA /* Foundation.framework */,
+				55AFF5A919AEBF23007FBACA /* CoreGraphics.framework */,
+				55AFF5AB19AEBF23007FBACA /* UIKit.framework */,
+				55AFF5CC19AEBF23007FBACA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55AFF5AD19AEBF23007FBACA /* Liberator */ = {
+			isa = PBXGroup;
+			children = (
+				55AFF5B619AEBF23007FBACA /* AppDelegate.h */,
+				55AFF5B719AEBF23007FBACA /* AppDelegate.m */,
+				55AFF5B919AEBF23007FBACA /* Main_iPhone.storyboard */,
+				55AFF5BC19AEBF23007FBACA /* Main_iPad.storyboard */,
+				55AFF5BF19AEBF23007FBACA /* MasterViewController.h */,
+				55AFF5C019AEBF23007FBACA /* MasterViewController.m */,
+				55AFF5C219AEBF23007FBACA /* DetailViewController.h */,
+				55AFF5C319AEBF23007FBACA /* DetailViewController.m */,
+				55AFF5C519AEBF23007FBACA /* Images.xcassets */,
+				55AFF5AE19AEBF23007FBACA /* Supporting Files */,
+			);
+			path = Liberator;
+			sourceTree = "<group>";
+		};
+		55AFF5AE19AEBF23007FBACA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55AFF5AF19AEBF23007FBACA /* Liberator-Info.plist */,
+				55AFF5B019AEBF23007FBACA /* InfoPlist.strings */,
+				55AFF5B319AEBF23007FBACA /* main.m */,
+				55AFF5B519AEBF23007FBACA /* Liberator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55AFF5D219AEBF23007FBACA /* LiberatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				55AFF5D819AEBF23007FBACA /* LiberatorTests.m */,
+				55AFF5D319AEBF23007FBACA /* Supporting Files */,
+			);
+			path = LiberatorTests;
+			sourceTree = "<group>";
+		};
+		55AFF5D319AEBF23007FBACA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55AFF5D419AEBF23007FBACA /* LiberatorTests-Info.plist */,
+				55AFF5D519AEBF23007FBACA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55AFF5A319AEBF23007FBACA /* Liberator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55AFF5DC19AEBF23007FBACA /* Build configuration list for PBXNativeTarget "Liberator" */;
+			buildPhases = (
+				55AFF5A019AEBF23007FBACA /* Sources */,
+				55AFF5A119AEBF23007FBACA /* Frameworks */,
+				55AFF5A219AEBF23007FBACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Liberator;
+			productName = Liberator;
+			productReference = 55AFF5A419AEBF23007FBACA /* Liberator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55AFF5CA19AEBF23007FBACA /* LiberatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55AFF5DF19AEBF23007FBACA /* Build configuration list for PBXNativeTarget "LiberatorTests" */;
+			buildPhases = (
+				55AFF5C719AEBF23007FBACA /* Sources */,
+				55AFF5C819AEBF23007FBACA /* Frameworks */,
+				55AFF5C919AEBF23007FBACA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55AFF5D119AEBF23007FBACA /* PBXTargetDependency */,
+			);
+			name = LiberatorTests;
+			productName = LiberatorTests;
+			productReference = 55AFF5CB19AEBF23007FBACA /* LiberatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55AFF59C19AEBF23007FBACA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Oscar Newman";
+				TargetAttributes = {
+					55AFF5CA19AEBF23007FBACA = {
+						TestTargetID = 55AFF5A319AEBF23007FBACA;
+					};
+				};
+			};
+			buildConfigurationList = 55AFF59F19AEBF23007FBACA /* Build configuration list for PBXProject "Liberator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55AFF59B19AEBF23007FBACA;
+			productRefGroup = 55AFF5A519AEBF23007FBACA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55AFF5A319AEBF23007FBACA /* Liberator */,
+				55AFF5CA19AEBF23007FBACA /* LiberatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55AFF5A219AEBF23007FBACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFF5BE19AEBF23007FBACA /* Main_iPad.storyboard in Resources */,
+				55AFF5C619AEBF23007FBACA /* Images.xcassets in Resources */,
+				55AFF5BB19AEBF23007FBACA /* Main_iPhone.storyboard in Resources */,
+				55AFF5B219AEBF23007FBACA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AFF5C919AEBF23007FBACA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFF5D719AEBF23007FBACA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55AFF5A019AEBF23007FBACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFF5B819AEBF23007FBACA /* AppDelegate.m in Sources */,
+				55AFF5C119AEBF23007FBACA /* MasterViewController.m in Sources */,
+				55AFF5B419AEBF23007FBACA /* main.m in Sources */,
+				55AFF5C419AEBF23007FBACA /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55AFF5C719AEBF23007FBACA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55AFF5D919AEBF23007FBACA /* LiberatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55AFF5D119AEBF23007FBACA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55AFF5A319AEBF23007FBACA /* Liberator */;
+			targetProxy = 55AFF5D019AEBF23007FBACA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55AFF5B019AEBF23007FBACA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55AFF5B119AEBF23007FBACA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		55AFF5B919AEBF23007FBACA /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55AFF5BA19AEBF23007FBACA /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		55AFF5BC19AEBF23007FBACA /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55AFF5BD19AEBF23007FBACA /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		55AFF5D519AEBF23007FBACA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55AFF5D619AEBF23007FBACA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55AFF5DA19AEBF23007FBACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55AFF5DB19AEBF23007FBACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55AFF5DD19AEBF23007FBACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Liberator/Liberator-Prefix.pch";
+				INFOPLIST_FILE = "Liberator/Liberator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		55AFF5DE19AEBF23007FBACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Liberator/Liberator-Prefix.pch";
+				INFOPLIST_FILE = "Liberator/Liberator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		55AFF5E019AEBF23007FBACA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Liberator.app/Liberator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Liberator/Liberator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LiberatorTests/LiberatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		55AFF5E119AEBF23007FBACA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Liberator.app/Liberator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Liberator/Liberator-Prefix.pch";
+				INFOPLIST_FILE = "LiberatorTests/LiberatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55AFF59F19AEBF23007FBACA /* Build configuration list for PBXProject "Liberator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AFF5DA19AEBF23007FBACA /* Debug */,
+				55AFF5DB19AEBF23007FBACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55AFF5DC19AEBF23007FBACA /* Build configuration list for PBXNativeTarget "Liberator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AFF5DD19AEBF23007FBACA /* Debug */,
+				55AFF5DE19AEBF23007FBACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55AFF5DF19AEBF23007FBACA /* Build configuration list for PBXNativeTarget "LiberatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55AFF5E019AEBF23007FBACA /* Debug */,
+				55AFF5E119AEBF23007FBACA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55AFF59C19AEBF23007FBACA /* Project object */;
+}
