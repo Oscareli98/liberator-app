@@ -953,7 +953,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Charles Newman (9VCJJWQW32)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Charles Newman (KDW32YPVYV)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -966,7 +966,7 @@
 					"$(PROJECT_DIR)/Liberator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bc8c5f9a-f353-4c99-b05b-77882a40c282";
+				PROVISIONING_PROFILE = "5e0509ac-de1d-4992-a4fd-4fd41bcbe16b";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -977,7 +977,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Charles Newman (9VCJJWQW32)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Charles Newman (KDW32YPVYV)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -990,7 +990,7 @@
 					"$(PROJECT_DIR)/Liberator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bc8c5f9a-f353-4c99-b05b-77882a40c282";
+				PROVISIONING_PROFILE = "5e0509ac-de1d-4992-a4fd-4fd41bcbe16b";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
