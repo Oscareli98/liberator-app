@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article>
+        <h1>{{title}}</h1>
+        {{# featureImage}}
+            <div class="feature-image" data-original="{{featureImage}}">
+                {{! <p>The Liberator</p> }}
+            </div>
+        {{/ featureImage}}
+        {{{body}}}
+    </article>
+
+    <script src="jquery.js"></script>
+    <script src="lazy-load.js"></script>
+    <script src="article.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+$(document).ready(function(){$.expr[":"].contains=$.expr.createPseudo(function(t){return function(e){return $(e).text().toUpperCase().indexOf(t.toUpperCase())>=0}}),$(".feature-image").lazyload({effect:"fadeIn"}),$('p:contains("story by")').hide(),$('p:contains("story by")').length&&$("p.author").text($('p:contains("story by")').text())});

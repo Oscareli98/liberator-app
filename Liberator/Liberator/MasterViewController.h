@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArticleHandler.h"
 
-@class DetailViewController;
+@class ArticleViewController;
 
 @interface MasterViewController : UITableViewController
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
+@property (strong, nonatomic) ArticleViewController *detailViewController;
+@property (nonatomic, retain) ArticleHandler *articleHandler;
 
 @end

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="article-refills.css">
+</head>
+<body>
+    <article class="type-system-slab">
+      {{# category}}
+      <p class="type">{{category}}</p>
+      {{/ category}}
+
+      <h1>{{title}}</h1>
+      <p class="date">{{date}}</p>
+
+      {{# featureImage}}
+          <div class="feature-image" data-original="{{featureImage}}"></div>
+      {{/ featureImage}}
+      {{{body}}}
+
+      <hr>
+      <p class="author">{{author}}</p>
+    </article>
+
+    <script src="jquery.js"></script>
+    <script src="lazy-load.js"></script>
+    <script src="article.js"></script>
+</body>
+</html>

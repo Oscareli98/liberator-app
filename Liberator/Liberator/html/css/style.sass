@@ -1,0 +1,79 @@
+@import 'normalize'
+@import 'bourbon'
+
+$linkcol: saturate(lighten(rgb(79, 172, 225), 3%), 4%)
+
+$header-font: 'Playfair Display'
+
+$body-font: 'Droid Serif'
+
+@import 'article_list'
+
+
+article.georgia
+    padding: 0
+    margin: 0
+    font-family: 'Georgia'
+    font-size: 16px
+    line-height: 1.3
+    width: 100%
+
+    .sharedaddy
+        display: none
+
+    h1
+        padding: 0 15px
+        font-family: $header-font
+        font-weight: 800
+        font-size: 20px
+        text-transform: capitalize
+
+    .feature-image
+
+        $img-height:  200px
+
+        width: 100%
+        height: $img-height
+        background: #ffffff
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        display: block
+        margin-bottom: 20px
+        // position: relative
+
+        p
+            color: #aaa
+            font-family: 'Didot'
+            font-weight: bold
+            font-size: 24px
+            width: 100%
+            text-align: center
+            line-height: $img-height
+
+    img, div.wp-caption img, div.wp-caption
+        width: 100% !important
+        height: auto !important
+        padding: 0
+        margin: 0
+    
+    p.wp-caption-text
+        color: #777777
+        font-size: 14px
+        font-family: 'Helvetica Neue'
+
+    p
+        padding: 0 15px
+        font-family: $body-font
+        font-size: 16px
+        line-height: 1.3
+
+    a
+        color: $linkcol
+        text-decoration: none
+
+        &:hover
+            color: desaturate(darken($linkcol, 0%), 50%)
+        
+        &:visited
+            color: desaturate(darken($linkcol, 0%), 50%)
