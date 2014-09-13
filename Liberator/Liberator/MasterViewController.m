@@ -14,7 +14,8 @@
 #import "NSString+StripHTML.h"
 
 #import "UIImageView+WebCache.h"
-
+#import "SWRevealViewController.h"
+#import "SDFeedParser.h"
 
 
 @interface MasterViewController () {
@@ -37,6 +38,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    SDFeedParser *feedParser = [[SDFeedParser alloc]init];
+    [feedParser parseURL:@"http://yourBlog.com/?json=1" success:^(NSArray *postsArray, NSInteger postsCount) {
+        
+        NSLog(@"Fetched %ld posts", postsCount);
+        NSLog(@"Posts: %@", postsArray);
+        
+    }failure:^(NSError *error) {
+        
+        NSLog(@"Error: %@", error);
+        
+    }];
+    
+    _menuButton.target = self.revealViewController;
+    _menuButton.action = @selector(revealToggle:);
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
