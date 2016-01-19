@@ -8,6 +8,7 @@
 
 #import "ArticleHandler.h"
 #import "Article.h"
+#import "MasterViewController.h"
 
 @interface ArticleHandler ()
 - (void)setArticlesFrom:(NSData *)json;
@@ -21,28 +22,34 @@
     self = [super init];
     if(self){
         _articles = [[NSMutableArray alloc] init];
-        _url = @"http://74.220.219.108/~lbjliber/wp-json/posts";
+        _url = @"http://74.220.219.108/~lbjliber/wp-json/posts/?filter[category_name]=";
+        _category = @"";
     }
     
     return self;
 }
 
 
-- (void)loadArticles:(UITableViewController*)controller
+- (void)loadArticles:(MasterViewController*)controller
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
         
         // Check for saved articles in NSUserDefaults
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        if ([defaults objectForKey:@"top-articles-json"] != nil) {
+        NSString *prefsString = [NSString stringWithFormat:@"articles-%@-json", _category];
+        if ([defaults objectForKey:prefsString] != nil) {
             // Last articles saved in JSON, load those, then check the web again
-            NSData *old_json = [defaults objectForKey:@"top-articles-json"];
+            NSData *old_json = [defaults objectForKey:prefsString];
             [self setArticlesFrom:old_json];
-//            [controller.tableView reloadData];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                controller.articles = _articles;
+                [controller.tableView reloadData];
+            });
+
         }
         
         
-        NSData *article_data = [self getDataFrom:_url];
+        NSData *article_data = [self getDataFrom:[_url stringByAppendingString:_category]];
         if(article_data == nil){
             dispatch_async(dispatch_get_main_queue(), ^{
                 [controller.tableView reloadData];
@@ -52,10 +59,11 @@
         }
         
         _articles = [[NSMutableArray alloc] init];
-        [defaults setObject:article_data forKey:@"top-articles-json"];
+        [defaults setObject:article_data forKey:prefsString];
         [self setArticlesFrom:article_data];
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            controller.articles = _articles;
             [controller.refreshControl endRefreshing];
             [controller.tableView reloadData];
         });

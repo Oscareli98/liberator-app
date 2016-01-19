@@ -1,3 +1,6 @@
 [submodule "SWRevealViewController"]
 	path = SWRevealViewController
 	url = https://github.com/John-Lluch/SWRevealViewController.git
+[submodule "SDFeedParser"]
+	path = SDFeedParser
+	url = https://github.com/sebyddd/SDFeedParser.git

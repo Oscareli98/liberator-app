@@ -41,14 +41,13 @@
     NSString *articleHTML = [_article getHTML];
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
-    NSLog(@"%@", articleHTML);
+//    NSLog(@"%@", articleHTML);
     [self.webView loadHTMLString:articleHTML baseURL:baseURL];
 }
 
 - (IBAction)openShareSheet:(id)sender {
     NSMutableArray *sharingItems = [NSMutableArray new];
     
-    [sharingItems addObject:_article.title];
     [sharingItems addObject:_article.postURL];
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems applicationActivities:nil];

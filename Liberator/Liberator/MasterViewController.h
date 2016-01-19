@@ -13,7 +13,11 @@
 
 @interface MasterViewController : UITableViewController
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 @property (strong, nonatomic) ArticleViewController *detailViewController;
 @property (nonatomic, retain) ArticleHandler *articleHandler;
+@property (nonatomic, retain) NSString *category;
+
+@property (nonatomic, retain) NSMutableArray *articles;
 
 @end
