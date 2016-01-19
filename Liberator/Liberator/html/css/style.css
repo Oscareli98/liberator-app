@@ -372,22 +372,22 @@ th {
   .article-list .article img {
     max-width: 100%; }
 
-article.georgia {
+article {
   padding: 0;
   margin: 0;
   font-family: "Georgia";
   font-size: 16px;
   line-height: 1.3;
   width: 100%; }
-  article.georgia .sharedaddy {
+  article .sharedaddy {
     display: none; }
-  article.georgia h1 {
+  article h1 {
     padding: 0 15px;
     font-family: "Playfair Display";
     font-weight: 800;
     font-size: 20px;
     text-transform: capitalize; }
-  article.georgia .feature-image {
+  article .feature-image {
     width: 100%;
     height: 200px;
     background: #ffffff;
@@ -396,7 +396,7 @@ article.georgia {
     background-size: contain;
     display: block;
     margin-bottom: 20px; }
-    article.georgia .feature-image p {
+    article .feature-image p {
       color: #aaa;
       font-family: "Didot";
       font-weight: bold;
@@ -404,24 +404,24 @@ article.georgia {
       width: 100%;
       text-align: center;
       line-height: 200px; }
-  article.georgia img, article.georgia div.wp-caption img, article.georgia div.wp-caption {
+  article img, article div.wp-caption img, article div.wp-caption {
     width: 100% !important;
     height: auto !important;
     padding: 0;
     margin: 0; }
-  article.georgia p.wp-caption-text {
+  article p.wp-caption-text, article dd.gallery-caption {
     color: #777777;
     font-size: 14px;
     font-family: "Helvetica Neue"; }
-  article.georgia p {
+  article p {
     padding: 0 15px;
     font-family: "Droid Serif";
     font-size: 16px;
     line-height: 1.3; }
-  article.georgia a {
+  article a {
     color: #58b3e7;
     text-decoration: none; }
-    article.georgia a:hover {
+    article a:hover {
       color: #88a6b7; }
-    article.georgia a:visited {
+    article a:visited {
       color: #88a6b7; }

@@ -9,13 +9,15 @@
 #import "MasterViewController.h"
 #import "ArticleViewController.h"
 #import "Article.h"
-#import "ArticleTableViewCell.h"
 #import "PhotoArticleTableViewCell.h"
 #import "NSString+StripHTML.h"
+#import "NSString+HTML.h"
+
 
 #import "UIImageView+WebCache.h"
 #import "SWRevealViewController.h"
-#import "SDFeedParser.h"
+
+#import "Liberator-Swift.h"
 
 
 @interface MasterViewController () {
@@ -30,8 +32,11 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.clearsSelectionOnViewWillAppear = NO;
         self.preferredContentSize = CGSizeMake(320.0, 600.0);
+
     }
     [super awakeFromNib];
+    _category = @"";
+
 }
 
 - (void)viewDidLoad
@@ -39,17 +44,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    SDFeedParser *feedParser = [[SDFeedParser alloc]init];
-    [feedParser parseURL:@"http://yourBlog.com/?json=1" success:^(NSArray *postsArray, NSInteger postsCount) {
-        
-        NSLog(@"Fetched %ld posts", postsCount);
-        NSLog(@"Posts: %@", postsArray);
-        
-    }failure:^(NSError *error) {
-        
-        NSLog(@"Error: %@", error);
-        
-    }];
+//    SDFeedParser *feedParser = [[SDFeedParser alloc]init];
+//    [feedParser parseURL:@"http://yourBlog.com/?json=1" success:^(NSArray *postsArray, NSInteger postsCount) {
+//        
+//        NSLog(@"Fetched %ld posts", postsCount);
+//        NSLog(@"Posts: %@", postsArray);
+//        
+//    }failure:^(NSError *error) {
+//        
+//        NSLog(@"Error: %@", error);
+//        
+//    }];
     
     _menuButton.target = self.revealViewController;
     _menuButton.action = @selector(revealToggle:);
@@ -61,12 +66,28 @@
     [self.navigationController.navigationBar setTitleTextAttributes: @{
                                                             NSFontAttributeName: [UIFont fontWithName:@"Didot-Bold" size:20.0f]
                                                             }];
+    
     self.articleHandler = [[ArticleHandler alloc] init];
+    self.articleHandler.category = _category;
+    
+    if ([_category isEqualToString: @""]) {
+        [self.navigationController.navigationBar setTitleTextAttributes: @{
+                                                                           NSFontAttributeName: [UIFont fontWithName:@"Didot-Bold" size:20.0f]
+                                                                           }];
+    }
+    else {
+        self.title = [_category capitalizedString];
+        [self.navigationController.navigationBar setTitleTextAttributes: @{
+                                                                           NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0f]
+                                                                           }];
+    }
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     
+    CGPoint newOffset = CGPointMake(0, -[self.tableView contentInset].top);
+    [self.tableView setContentOffset:newOffset animated:YES];
     [self.refreshControl beginRefreshing];
     [self refresh];
 }
@@ -85,7 +106,9 @@
 - (void)refresh
 {
     [_articleHandler loadArticles:self];
+
 }
+
 
 
 #pragma mark - Table View
@@ -97,31 +120,58 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.articleHandler.articles count];
+    return [self.articles count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ArticleTableViewCell *cell;
-    Article *article = _articleHandler.articles[indexPath.row];
+//    ArticleTableViewCell *cell;
+//    Article *article = _articles[indexPath.row];
+//
+//    if([article hasFeatureImage]){
+//        cell = [tableView dequeueReusableCellWithIdentifier:@"article_with_picture" forIndexPath:indexPath];
+//        [((PhotoArticleTableViewCell*)cell).featureImage sd_setImageWithURL:[NSURL URLWithString:article.featureImage]];
+//    }
+//    else{
+//        cell = [tableView dequeueReusableCellWithIdentifier:@"article_no_picture_label" forIndexPath:indexPath];
+//    }
+//    
+//    cell.title.text = [article.title capitalizedString];
+//    cell.summary.selectable = YES;
+//    cell.summary.text = [article.excerpt stripHTML];
+//    
+//    [cell updateConstraints];
+//    
+////    NSDate *object = _objects[indexPath.row];
+////    cell.textLabel.text = [object description];
+//    return cell;
 
+    ArticleAttributedCell *cell;
+    Article *article = _articles[indexPath.row];
+    
     if([article hasFeatureImage]){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"article_with_picture" forIndexPath:indexPath];
-        [((PhotoArticleTableViewCell*)cell).featureImage sd_setImageWithURL:[NSURL URLWithString:article.featureImage]];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"article_label" forIndexPath:indexPath];
+        [cell.feature_image sd_setImageWithURL:[NSURL URLWithString:article.featureImage]];
     }
     else{
-        cell = [tableView dequeueReusableCellWithIdentifier:@"article_no_picture" forIndexPath:indexPath];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"article_no_picture_label" forIndexPath:indexPath];
     }
     
-    cell.title.text = article.title;
-    cell.summary.selectable = YES;
-    cell.summary.text = [article.excerpt stripHTML];
+    NSString *title = [[article.title stringByDecodingHTMLEntities] stringByAppendingString:@"\n"];
+    NSString *body = [[[article.excerpt stringByDecodingHTMLEntities] stringByConvertingHTMLToPlainText] stringByReplacingOccurrencesOfString:@"Share this: Twitter Facebook Email Print" withString:@""];
     
-    [cell updateConstraints];
+    NSString *combined = [title stringByAppendingString:body];
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:combined];
+    [attr addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"Georgia" size:20] range:NSMakeRange(0, title.length)];
+    [attr addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue" size:13] range:NSMakeRange(title.length, body.length)];
+    [attr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithWhite:0.333 alpha:1.000] range:NSMakeRange(title.length, body.length)];
     
-//    NSDate *object = _objects[indexPath.row];
-//    cell.textLabel.text = [object description];
+    cell.attr_string.attributedText = attr;
+    [cell.attr_string sizeToFit];
+    
+
     return cell;
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

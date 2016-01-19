@@ -60,7 +60,6 @@
 - (void)loadHTML
 {
     // Update the user interface for the detail item.
-    
     NSString *articleHTML = [_articleTemplate renderObject:_articleHandler error:NULL];
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];

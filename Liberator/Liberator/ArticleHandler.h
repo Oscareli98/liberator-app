@@ -14,6 +14,8 @@
 
 @property (nonatomic, retain) NSString *url;
 
+@property (nonatomic, retain) NSString* category;
+
 - (NSData *) getDataFrom:(NSString *)url;
 - (void)loadArticles:(UITableViewController*)controller;
 @end

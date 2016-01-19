@@ -130,6 +130,18 @@ p {
   }
 }
 
+.gallery-caption{
+     color: #777777;
+    font-size: 12px;
+    font-family: "Helvetica Neue";
+    line-height: 1;
+}
+
+
+#gallery-1 img {
+    border: none;
+}
+
 a.read-more {
   display: inline-block;
   font-family: $serif;
